@@ -27,7 +27,7 @@ gulp.task('default', function () {
     }))
   es6.pipe(change(uglifyJS));
   const merged = merge(es6, browser)
-    //.pipe(change(uglifyJS));
+    .pipe(change(uglifyJS));
 
   return merged
     .pipe(gulp.dest('dist'));
